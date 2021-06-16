@@ -336,8 +336,11 @@ section {
 	cursor: pointer;
 	border-radius: 5px;
 }
+.contact-form .input-box input[type = 'submit']:hover {
+	box-shadow: 0 0 0 0.1rem rgb(255 1 92 / 65%);;
+}
 .contact-form .input-box input[type = 'submit']:focus {
-	box-shadow: 0 0 0 0.2rem rgb(255 1 92 / 65%);;
+	box-shadow: 0 0 0 0.1rem rgb(255 1 92 / 65%);;
 }
 .copy-right-text {
 	padding: 8px 40px;
@@ -353,6 +356,12 @@ section {
 	text-decoration: none;
 }
 
+.swal2-container {
+	z-index: 10000 !important;
+}
+.fa-grin-stars {
+	color: darkorange;
+}
 @media (max-width: 991px) {
 	header,
 	header.sticky {
