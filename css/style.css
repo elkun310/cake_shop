@@ -22,7 +22,7 @@ body {
 	display: flex;
 	justify-content:center;
 	align-items: center;
-	background: url('../images/bg.jpg');
+	background: url('../images/bg-2.jpg');
 	background-size: cover;
 }
 .banner .content {
@@ -39,18 +39,54 @@ body {
 }
 .btn {
 	font-size: 1em;
-	color: #fff;
-	background: #ff0157;
-	display: inline-block;
-	padding: 10px 30px;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 20px;
 	margin-top: 20px;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 2px;
 	transition: 0.5s;
 }
-.btn:hover {
+.btn-menu {
+    font-size: 1.25em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 14px 35px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	transition: 0.5s;
+	position: relative;
+    visibility: visible;
+    transform-origin: 50% 50% 0px;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1);
+    border-radius: 5px;
+}
+.btn, .btn-menu:hover {
 	letter-spacing: 6px;
+}
+
+.btn-menu::after {
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    content: "";
+    z-index: -1;
+    background-color: #e67593;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    width: 0;
+}
+
+.btn-menu:hover::after, .btn-menu:focus::after, .btn-menu:active::after {
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
 }
 
 /*----Header----*/
@@ -102,6 +138,9 @@ header.sticky .navigation li a {
 header .navigation li a:hover {
 	color: #ff0157;
 }
+header .navigation li a.active-button {
+	color: #ff0157;
+}
 
 section {
 	padding: 100px;
@@ -145,6 +184,27 @@ section {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+@keyframes cf3FadeInOut {
+	0% {
+	  opacity:1;
+	}
+	45% {
+		opacity:1;
+	}
+	55% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+.about img.top {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: alternate;
 }
 
 /*----Menu----*/
