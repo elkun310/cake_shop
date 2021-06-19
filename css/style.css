@@ -24,6 +24,7 @@ body {
 	align-items: center;
 	background: url('../images/bg-2.jpg');
 	background-size: cover;
+	background-attachment: fixed;
 }
 .banner .content {
 	max-width: 900px;
@@ -451,6 +452,11 @@ section {
 		color: #111;
 		font-size: 1.6em;
 
+	}
+	.banner {
+		background: url('../images/bg-5.jpg');
+		background-size: cover;
+    	background-attachment: fixed;
 	}
 	.menu-toggle {
 		position: relative;
